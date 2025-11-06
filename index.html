@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GWW – Mockup</title>
+  <style>
+    :root{
+      --bg:#f4fbf9; --card:#ffffff; --text:#0e1b1a; --muted:#3b6b66; --accent:#24b8a7; --accent2:#6fd6c9; --ring:#4ecdc477;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial; color:var(--text); background: radial-gradient(1200px 600px at 10% -10%, #8fe8dc33, transparent), radial-gradient(900px 500px at 110% 10%, #7cc7ff22, transparent), var(--bg);}
+    a{color:var(--accent)}
+    header{position:sticky; top:0; backdrop-filter:saturate(140%) blur(8px); background:#ffffffcc; border-bottom:1px solid #0e1b1a10}
+    .wrap{max-width:1000px; margin:0 auto; padding:0 20px}
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .nav a.logo{font-weight:700; text-decoration:none; color:var(--text)}
+    .nav .links a{margin-left:18px; text-decoration:none; color:var(--muted)}
+    .btn{display:inline-block; padding:12px 16px; border-radius:12px; background:linear-gradient(135deg, var(--accent), var(--accent2)); color:#fff; font-weight:700; text-decoration:none; box-shadow:0 10px 24px #24b8a722}
+
+    .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:12px}
+    .tile{padding:18px; border-radius:16px; background:#ffffff; border:1px solid #0e1b1a10; color:var(--text); text-decoration:none; display:flex; align-items:center; justify-content:center; gap:8px}
+    .card{background:var(--card); border:1px solid #0e1b1a10; border-radius:18px; padding:22px; box-shadow:0 10px 30px #0e1b1a0d}
+
+    body.wireframe *{outline:1px dashed var(--ring); outline-offset:-2px}
+    /* Zusatz: runde Buttons/Karten & Strichmännchen-Loop */
+    .round{border-radius:999px; padding:10px 16px; background:transparent; border:1px solid #0e1b1a22; color:var(--text)}
+    .roundcard{border-radius:22px}
+    .stick-video{width:240px; height:160px; display:grid; place-items:center; background:linear-gradient(180deg,#f3fffd,#e7fbf7); border:1px solid #0e1b1a10; border-radius:14px}
+    .stick-video svg{width:70%; height:70%; color:var(--accent)}
+    @keyframes walkL{0%{transform:rotate(20deg)}50%{transform:rotate(-20deg)}100%{transform:rotate(20deg)}}
+    @keyframes walkR{0%{transform:rotate(-20deg)}50%{transform:rotate(20deg)}100%{transform:rotate(-20deg)}}
+    .stick-video .legL{transform-origin:60px 50px; animation:walkL 1.2s infinite ease-in-out}
+    .stick-video .legR{transform-origin:60px 50px; animation:walkR 1.2s infinite ease-in-out}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="#home">GWW</a>
+      <nav class="links">
+        <button id="wf" type="button" style="margin-right:14px; background:transparent; border:1px solid #ccc; color:var(--muted); padding:8px 10px; border-radius:10px; cursor:pointer">Wireframe</button>
+        <a href="#ueber">Über uns</a>
+        <a href="#themen">Unsere Themen</a>
+        <a href="#projekte">Projekten</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="home" class="route" style="padding:64px 0 36px">
+      <div class="card" style="margin-bottom:16px">
+        <h1>GWW</h1>
+        <p style="color:var(--muted)">Mockup für Startseite – hell, freundlich, zwischen Grün und Blau.</p>
+        <p style="display:flex; gap:10px; flex-wrap:wrap">
+          <a class="btn" href="#ueber">Über uns</a>
+          <a class="btn" href="#themen">Unsere Themen</a>
+          <a class="btn" href="#projekte">Projekten</a>
+        </p>
+      </div>
+      <div class="grid">
+        <a class="tile" href="#impressum" title="Impressum">
+          <svg viewBox="0 0 24 24" width="26" height="26"><path d="M4 5h16v14H4z M7 9h10M7 13h10M7 17h7" fill="none" stroke="currentColor"/></svg>
+          <span>Impressum</span>
+        </a>
+        <a class="tile" href="#feedback" title="Feedback">
+          <svg viewBox="0 0 24 24" width="26" height="26"><path d="M4 5h16v10H8l-4 4z" fill="none" stroke="currentColor"/></svg>
+          <span>Feedback</span>
+        </a>
+        <a class="tile" href="#" title="Instagram"><svg viewBox="0 0 24 24" width="24" height="24"><rect x="4" y="4" width="16" height="16" rx="4" fill="none" stroke="currentColor"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor"/></svg></a>
+        <a class="tile" href="#" title="TikTok"><svg viewBox="0 0 24 24" width="24" height="24"><path d="M14 4v4a5 5 0 1 1-5 5V8" fill="none" stroke="currentColor"/></svg></a>
+        <a class="tile" href="#" title="YouTube"><svg viewBox="0 0 24 24" width="24" height="24"><rect x="3" y="7" width="18" height="10" rx="3" fill="none" stroke="currentColor"/><polygon points="10,9 16,12 10,15"/></svg></a>
+        <a class="tile" href="#" title="Blog"><svg viewBox="0 0 24 24" width="24" height="24"><path d="M5 6h14v12H5z M8 9h10M8 13h10M8 17h6" fill="none" stroke="currentColor"/></svg></a>
+      </div>
+    </section>
+
+    <section id="ueber" class="route" hidden>
+      <div class="card">
+        <h2>Über uns</h2>
+        <p>Hier steht der Info‑Text zu GWW. Mission, Team, Ziele. Kontakt unten.</p>
+      </div>
+      <div id="kontakt" class="card" style="margin-top:18px">
+        <h3>Kontakt</h3>
+        <p>Schreib uns eine Nachricht oder nutze die E‑Mail: <a href="mailto:hallo@example.com">hallo@example.com</a></p>
+        <form onsubmit="event.preventDefault(); alert('Danke! Diese Demo verschickt keine echten Nachrichten.');">
+          <label for="name">Name</label><br>
+          <input id="name" type="text" style="width:100%; max-width:600px; margin:6px 0 10px; padding:10px; border-radius:10px; border:1px solid #0e1b1a22" placeholder="Dein Name"/>
+          <br>
+          <label for="msg">Nachricht</label><br>
+          <textarea id="msg" rows="4" style="width:100%; max-width:600px; margin:6px 0 10px; padding:10px; border-radius:10px; border:1px solid #0e1b1a22" placeholder="Deine Nachricht"></textarea><br>
+          <button class="btn" type="submit">Senden</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="themen" class="route" hidden>
+      <div class="card">
+        <h2>Unsere Themen</h2>
+        <p>Wähle eine Perspektive.</p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px">
+          <button class="btn subtab" data-tab="zugehoerigen">Zugehörigen</button>
+          <button class="btn subtab" data-tab="ausgeschlossenen">Ausgeschlossenen</button>
+          <button class="btn subtab" data-tab="widerstand">Widerstand</button>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Info</h3>
+        <p>Kurzer einleitender Text zur gewählten Kategorie.</p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin:10px 0">
+          <button class="round">Thema 1</button>
+          <button class="round">Thema 2</button>
+          <button class="round">Thema 3</button>
+          <button class="round">Thema 4</button>
+          <button class="round">Thema 5</button>
+          <button class="round">Thema 6</button>
+        </div>
+        <a class="tile" href="#" style="margin-top:10px; display:block; text-decoration:none"><strong>Pädagogische Materialien</strong><p>Arbeitsblätter, Didaktik‑Hinweise, Quellen – zur Übersicht</p></a>
+      </div>
+    </section>
+
+    <section id="projekte" class="route" hidden>
+      <div class="card">
+        <h2>Projekten</h2>
+        <p>Ein kurzer Überblick zu laufenden und abgeschlossenen Projekten.</p>
+      </div>
+      <div class="grid" style="margin-top:18px">
+        <article class="tile roundcard"><h3>Projekt 1</h3><p>Kurztext</p></article>
+        <article class="tile roundcard"><h3>Projekt 2</h3><p>Kurztext</p></article>
+        <article class="tile roundcard"><h3>Projekt 3</h3><p>Kurztext</p></article>
+        <article class="tile roundcard"><h3>Projekt 4</h3><p>Kurztext</p></article>
+        <article class="tile roundcard"><h3>Projekt 5</h3><p>Kurztext</p></article>
+        <article class="tile roundcard"><h3>Projekt 6</h3><p>Kurztext</p></article>
+      </div>
+    </section>
+
+    <section id="impressum" class="route" hidden>
+      <div class="card"><h2>Impressum</h2><p>Platzhalter für Impressum.</p></div>
+    </section>
+    <section id="feedback" class="route" hidden>
+      <div class="card"><h2>Feedback (Mockup‑Video)</h2>
+        <p>Loopendes Strichmännchen als Platzhalter für echte Kurzclips.</p>
+        <div class="stick-video" aria-label="Strichmännchen‑Mockup" role="img">
+          <svg viewBox="0 0 120 80" preserveAspectRatio="xMidYMid meet">
+            <circle cx="60" cy="20" r="8" stroke="currentColor" fill="none" />
+            <line x1="60" y1="28" x2="60" y2="50" stroke="currentColor"/>
+            <line x1="60" y1="36" x2="46" y2="44" stroke="currentColor"/>
+            <line x1="60" y1="36" x2="74" y2="44" stroke="currentColor"/>
+            <line class="legL" x1="60" y1="50" x2="50" y2="66" stroke="currentColor"/>
+            <line class="legR" x1="60" y1="50" x2="70" y2="66" stroke="currentColor"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap"><small>© <span id="y"></span> GWW</small></footer>
+  <script>
+    document.getElementById('y').textContent=new Date().getFullYear();
+    const wf=document.getElementById('wf'); if(wf) wf.addEventListener('click',()=>document.body.classList.toggle('wireframe'));
+    const routes=document.querySelectorAll('.route');
+    function show(r){routes.forEach(s=>s.hidden=true);(document.querySelector(r)||document.querySelector('#home')).hidden=false;window.scrollTo({top:0,behavior:'smooth'});}window.addEventListener('hashchange',()=>show(location.hash));show(location.hash||'#home');
+
+    // Themen-Subtabs Info-Text (Platzhalter)
+    const subtabs=document.querySelectorAll('.subtab');
+    const infoBlock=()=>document.querySelector('#themen + .card p')||document.querySelector('#themen .card p');
+    subtabs.forEach(btn=>btn.addEventListener('click',()=>{
+      subtabs.forEach(b=>b.classList.remove('active')); btn.classList.add('active');
+      const map={zugehoerigen:'Info zu Zugehörigen – kurzer Einleitungstext.', ausgeschlossenen:'Info zu Ausgeschlossenen – kurzer Einleitungstext.', widerstand:'Info zu Widerstand – kurzer Einleitungstext.'};
+      const p=document.querySelector('#themen .card:nth-of-type(2) p'); if(p) p.textContent=map[btn.dataset.tab]||'Kurzer einleitender Text zur gewählten Kategorie.';
+    }));
+  </script>
+</body>
+</html>
